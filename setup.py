@@ -25,7 +25,7 @@ setup(
     ],
     extras_require={
         'cpu': ['tensorflow>=2.0.0', 'librosa'],
-        'gpu': ['tensorflow-gpu>=2.0.0', 'librosa'],
+        'gpu': ['tensorflow>=2.0.0', 'librosa'],
     },
     include_package_data=True
 )
