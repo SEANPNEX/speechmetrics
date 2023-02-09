@@ -14,14 +14,14 @@ As of our recent tests, installation goes smoothly on ubuntu, but there may be s
 For cpu usage:
 ```
 pip install numpy
-pip install git+https://github.com/aliutkus/speechmetrics#egg=speechmetrics[cpu]
+pip install git+https://github.com/SEANPNEX/speechmetrics#egg=speechmetrics[cpu]
 ```
 
 For gpu usage (on the MOSNet)
 
 ```
 pip install numpy
-pip install git+https://github.com/aliutkus/speechmetrics#egg=speechmetrics[gpu]
+pip install git+https://github.com/SEANPNEX/speechmetrics=speechmetrics[gpu]
 ```
 
 # Usage
@@ -38,7 +38,7 @@ The process is to:
         - '' will match all
     * window: float or None
       gives the length in seconds of the windows on which to compute the actual scores. If None, the whole signals will be considered.  
-    ```my_metrics = speechmetrics.load('relative', window=5)```
+      ```my_metrics = speechmetrics.load('relative', window=5)```
 
 2. Just call the object returned by `load` with your estimated file (and your reference in case of relative metrics.)    
    ```scores = my_metrics(path_to_estimate, path_to_reference)```  
@@ -94,7 +94,7 @@ As provided by the [SRMR Toolbox](https://github.com/jfsantos/SRMRpy), implement
   number={7},  
   pages={1766--1774},  
   year={2010},  
-}
+  }
 
 * > @inproceedings{santos2014updated,  
   title={An updated objective intelligibility   estimation metric for normal hearing listeners under noise and reverberation},  
@@ -102,7 +102,7 @@ As provided by the [SRMR Toolbox](https://github.com/jfsantos/SRMRpy), implement
   booktitle={Proc. Int. Workshop Acoust. Signal Enhancement},  
   pages={55--59},  
   year={2014}  
-}
+  }
 
 * > @article{santos2014updating,  
   title={Updating the SRMR-CI metric for improved intelligibility prediction for cochlear implant users},  
@@ -112,7 +112,7 @@ As provided by the [SRMR Toolbox](https://github.com/jfsantos/SRMRpy), implement
   number={12},  
   pages={2197--2206},  
   year={2014},  
-}
+  }
 
 ## Relative metrics (`relative`)
 
@@ -157,7 +157,7 @@ As implemented by [@mpariente](https://github.com/mpariente) [here](https://gith
   pages={4214--4217},  
   year={2010},  
   organization={IEEE}  
-}
+  }
 * > @article{taal2011algorithm,  
   title={An algorithm for intelligibility prediction of time--frequency weighted noisy speech},  
   author={Taal, Cees H and Hendriks, Richard C and Heusdens, Richard and Jensen, Jesper},  
@@ -167,7 +167,7 @@ As implemented by [@mpariente](https://github.com/mpariente) [here](https://gith
   pages={2125--2136},  
   year={2011},  
   publisher={IEEE}  
-}
+  }
 * > @article{jensen2016algorithm,  
   title={An algorithm for predicting the intelligibility of speech masked by modulated noise maskers},  
   author={Jensen, Jesper and Taal, Cees H},  
@@ -177,7 +177,7 @@ As implemented by [@mpariente](https://github.com/mpariente) [here](https://gith
   pages={2009--2022},  
   year={2016},  
   publisher={IEEE}  
-}
+  }
 
 ### SISDR: Scale-invariant SDR (`relative.sisdr` or `sisdr`) 
 *expressed in dB, higher is better.*
@@ -194,4 +194,4 @@ As described in the following paper and implemented by
    author={Roux, Jonathan Le and Wisdom, Scott and Erdogan, Hakan and Hershey, John R.},  
    year={2019},  
    month={May}  
-}
+  }
